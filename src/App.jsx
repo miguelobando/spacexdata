@@ -1,6 +1,6 @@
 import './App.css'
 import logo from './assets/logo_spacex.png'
-import { Heading, Image } from '@chakra-ui/react'
+import { Heading, Image, Flex, Input } from '@chakra-ui/react'
 import { LaunchList } from './components/LaunchList'
 import { LaunchDetails } from './components/LaunchDetails'
 import { Route, Routes, Link } from 'react-router-dom'
@@ -12,7 +12,10 @@ export function App() {
       <Link to="/">
         <Image src={logo} width={300} style={{ "cursor": "pointer" }} />
       </Link>
-      <Heading as="h1" size="lg">Space X Launches</Heading >
+
+      <Flex justify="space-around">
+        <Heading as="h1" size="lg">Space X Launches</Heading >
+      </Flex>
       <Routes> 
         <Route path="/" element={<LaunchList />} /> 
         <Route path="launch/:launchId" element={<LaunchDetails />} />
