@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import * as API from '../services/launches'
 import { LaunchItem } from './LaunchItem'
 import { Flex, Spinner } from '@chakra-ui/react'
-import { SearchBar } from './searchBar'
+import { SearchBar } from './SearchBar'
 
 export function LaunchList(){
  
