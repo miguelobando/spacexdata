@@ -31,7 +31,7 @@ export function LaunchItem (launch) {
           </Flex>
 
           <Link to={`/launch/${launch.flight_number}`}> 
-            <Button mt={2} colorScheme="facebook"> More detals </Button>
+            <Button mt={2} colorScheme="facebook"> More details </Button>
           </Link>
     </Box>)
 } 
