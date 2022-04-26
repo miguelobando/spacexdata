@@ -1,9 +1,9 @@
-import './App.css'
 import logo from './assets/logo_spacex.png'
-import { Heading, Image, Flex } from '@chakra-ui/react'
-import { LaunchList } from './components/LaunchList'
-import { LaunchDetails } from './components/LaunchDetails'
 import { Route, Routes, Link } from 'react-router-dom'
+import { LaunchDetails } from './components/LaunchDetails'
+import { Home } from './views/Home'
+import { Heading, Image, Flex } from '@chakra-ui/react'
+import './App.css'
 
 export function App() {
 
@@ -17,7 +17,7 @@ export function App() {
         <Heading as="h1" size="lg">Space X Launches</Heading >
       </Flex>
       <Routes> 
-        <Route path="/" element={<LaunchList />} /> 
+        <Route path="/" element={<Home />} /> 
         <Route path="launch/:launchId" element={<LaunchDetails />} />
       </Routes>
       
