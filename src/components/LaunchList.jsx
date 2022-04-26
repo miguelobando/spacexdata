@@ -22,7 +22,7 @@ export function LaunchList(){
         return e.mission_name.toLowerCase().includes(search.toLowerCase())
       })
       setList(result)
-    },[search])
+    },[launches, search])
   
     return(
       <>

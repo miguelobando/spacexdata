@@ -1,6 +1,6 @@
 import './App.css'
 import logo from './assets/logo_spacex.png'
-import { Heading, Image, Flex, Input } from '@chakra-ui/react'
+import { Heading, Image, Flex } from '@chakra-ui/react'
 import { LaunchList } from './components/LaunchList'
 import { LaunchDetails } from './components/LaunchDetails'
 import { Route, Routes, Link } from 'react-router-dom'
@@ -33,4 +33,9 @@ IMPLEMENT PAGINATION TO ALL THE LAUNCHES (API)
 IMPLEMENT FOOTER COMPONENT
 IMPLEMENT OAUTH TO REGISTER AN USER AND CREATE SCREEN 
 IMPLEMENT REDUX OR REACT-QUERY TO STORE AN USER ALREADY SIGNED UP
+CREATE A CUSTOM HOOK TO IMPLEMENT ALL THE LOGIC OF THE LIST 
+LIFT UP THE SEARCHBAR AND LET THE LAUNCH COMPONENT AS JUST VIEW 
+USE MEMO AND DEBOUNCER HOOK TO IMPROVE SEARCHBAR PERFORMANCE
+ADD PROPTYPES  
+
 */
