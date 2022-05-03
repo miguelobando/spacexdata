@@ -1,26 +1,31 @@
 import logo from './assets/logo_spacex.png'
 import { Route, Routes, Link } from 'react-router-dom'
 import { LaunchDetails } from './components/LaunchDetails'
+import { Bookmark } from './views/Bookmark'
 import { Home } from './views/Home'
 import { Heading, Image, Flex } from '@chakra-ui/react'
+import { Provider } from 'react-redux'
+import store from './store'
 import './App.css'
 
-export function App() {
+export default function App() {
 
   return (
     <>
-      <Link to="/">
-        <Image src={logo} width={300} style={{ "cursor": "pointer" }} />
-      </Link>
+      <Provider store={store}>      
+        <Link to="/">
+          <Image src={logo} width={300} style={{ "cursor": "pointer" }} />
+        </Link>
 
-      <Flex justify="space-around">
-        <Heading as="h1" size="lg">Space X Launches</Heading >
-      </Flex>
-      <Routes> 
-        <Route path="/" element={<Home />} /> 
-        <Route path="launch/:launchId" element={<LaunchDetails />} />
-      </Routes>
-      
+        <Flex justify="space-around">
+          <Heading as="h1" size="lg">Space X Launches</Heading >
+        </Flex>
+        <Routes> 
+          <Route path="/" element={<Home />} /> 
+          <Route path="launch/:launchId" element={<LaunchDetails />} />
+          <Route path="/bookmarks" element={<Bookmark />}/>
+        </Routes>
+      </Provider>
     </>
   )
 }
